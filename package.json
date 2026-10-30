@@ -1,0 +1,23 @@
+{
+  "name": "jsa-20",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html --public-url ./"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "overrides": {
+    "@swc/core": "1.15.33"
+  },
+  "devDependencies": {
+    "@parcel/transformer-inline-string": "^2.16.4",
+    "parcel": "^2.16.4"
+  },
+  "dependencies": {
+    "handlebars": "^4.7.10"
+  }
+}

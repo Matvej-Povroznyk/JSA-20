@@ -1,0 +1,135 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg-color: #111318;
+    --card-color: 20232c;
+    --input-color: #292f3c;
+    --border-color: #41495b;
+    --primary-color: #4f70f5;
+    --primary-hover: #3d5fe0;
+    --text-color: #f1f5f9;
+    --secondary-text: #cbd5cb;
+    --placeholder-color: #a3acbd;
+    --icon-color: #8299ff;
+    --border-radius: 12px;
+    --trasition: 200ms ease;
+}
+
+body {
+    min-height: 100vh;
+    padding: 30px 0;
+    font-family: Arial, sans-serif;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+.container {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+#search-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    max-width: 420px;
+    margin: 20px auto 40px;
+}
+
+#search-form input {
+    width: 100%;
+    padding: 15px 18px;
+    color: var(--text-color);
+    font-size: 16px;
+    background-color: var(--input-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    outline: none;
+    transition: border-color var(--trasition)
+}
+
+#search-form input::placeholder {
+    color: var(--placeholder-color);
+}
+
+#search-form input:focus {
+    border-color: var(--primary-color);
+
+}
+
+#search-form button, .load-more {
+    padding: 13px 24px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color var(--trasition);
+}
+
+#search-form button {
+    width: 100%;
+}
+
+#search-form button:hover, .load-more:hover {
+    background-color: var(--primary-hover);
+}
+
+.gallery {
+    display: grid;;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    list-style: none;
+}
+
+.photo-card {
+    min-width: 0;
+    overflow: hidden;
+    background-color: var(--card-color);
+    border: 1px solid #303541;
+    border-radius: var(--border-radius);
+}
+
+.photo-card img {
+    display: block;
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 15px 10px;
+
+}
+
+.stats-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--secondary-text);
+    font-size: 13px;
+}
+
+.material-icons {
+    color: var(--icon-color);
+    font-size: 19px;
+}
+
+.load-more {
+    display: none;
+    width: 220px;
+    margin: 32px auto 0;
+}
